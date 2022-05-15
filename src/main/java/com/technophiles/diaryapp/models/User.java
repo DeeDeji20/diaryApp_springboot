@@ -1,5 +1,6 @@
 package com.technophiles.diaryapp.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -27,7 +28,7 @@ public class User {
     @Column(unique = true)
     private String email;
 
-    @Size(min = 6, max = 10)
+//    @Size(min = 6, max = 10)
     private String password;
 
     @OneToMany(mappedBy = "user",

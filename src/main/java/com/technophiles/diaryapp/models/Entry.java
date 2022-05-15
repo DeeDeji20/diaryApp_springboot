@@ -1,7 +1,9 @@
 package com.technophiles.diaryapp.models;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.apache.tomcat.jni.Local;
 import org.hibernate.annotations.CreationTimestamp;
@@ -13,6 +15,8 @@ import java.time.LocalDateTime;
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Entry {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -35,4 +39,5 @@ public class Entry {
     public Entry(String text) {
         this.text = text;
     }
+
 }
